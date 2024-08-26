@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Payment with Google Pay UPI</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script> <!-- Include QR code library -->
+</head>
+<body>
+    <div class="container">
+        <h1>Support Our Museum</h1>
+        <p>Enter the amount you wish to pay:</p>
+        <input type="number" id="amount" placeholder="Enter amount in ₹" min="1" required>
+        <div class="button-container">
+            <button id="pay-button">Generate QR Code</button>
+            <button id="pay-via-app-button">Pay via App</button>
+        </div>
+
+        <!-- QR Code Display -->
+        <div id="qr-code-container">
+            <canvas id="qr-code"></canvas>
+        </div>
+
+        <!-- Optional: Display the UPI URL -->
+        <p id="upi-url"></p>
+    </div>
+    
+    <script src="index.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
