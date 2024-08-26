@@ -6,11 +6,13 @@
     <title>Museum Payment with Google Pay UPI</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script> <!-- Include QR code library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> <!-- Include jsPDF for PDF generation -->
 </head>
 <body>
     <div class="container">
         <h1>Support Our Museum</h1>
-        <p>Enter the amount you wish to pay:</p>
+        <p>Enter your name and the amount you wish to pay:</p>
+        <input type="text" id="name" placeholder="Enter your name" required>
         <input type="number" id="amount" placeholder="Enter amount in ₹" min="1" required>
         <div class="button-container">
             <button id="pay-button">Generate QR Code</button>
@@ -22,8 +24,8 @@
             <canvas id="qr-code"></canvas>
         </div>
 
-        <!-- Optional: Display the UPI URL -->
-        <p id="upi-url"></p>
+        <!-- Button to generate and download the receipt -->
+        <button id="download-receipt" style="display:none;">Download Receipt</button>
     </div>
     
     <script src="index.js"></script> <!-- Link to your JS file -->
